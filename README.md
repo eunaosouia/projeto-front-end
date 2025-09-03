@@ -2,7 +2,7 @@
 
 This repository was created to share and demonstrate how to build a responsive landing page section using **TailwindCSS**, **Next.js**, and **Next Theme**.  
 
-The main goal is to serve as a **practical example for a friend**, showing how to:  
+The main goal is **to show my skills**, showing how to:  
 - Structure a simple landing page with **Next.js**  
 - Apply modern styling with **TailwindCSS**  
 - Manage dark/light modes with **Next Theme**  
@@ -34,4 +34,4 @@ The project will be running at http://localhost:3000.
 ## 🎯 Purpose
 
 This is not a production-ready project.  
-It was built as a learning and demonstration repository to teach a friend how to build responsive UIs with Next.js and TailwindCSS, while also sharing ideas, examples, and good practices.
+It was built as a demonstration repository to show to Contabilidade.com my skills building responsive UIs with Next.js and TailwindCSS, while also sharing ideas, examples, and good practices.
