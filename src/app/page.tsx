@@ -87,13 +87,13 @@ export function BenefitsTableComponent({ benefits }: { benefits: BenefitsTable }
     <table className="w-full max-w-[986px] hidden md:block">
       <thead>
         <tr className="border-b border-primary align-middle">
-          <th colSpan={3} className="px-4 text-left text-primary text-[22px]">
+          <th colSpan={3} className="text-left text-primary text-[22px]">
             {benefits.headers.firstColumn}
           </th>
-          <th className="bg-neutral-50 rounded-t-2xl py-8 align-middle w-52">
+          <th className="bg-neutral-50 rounded-t-2xl py-[32.16px] align-middle w-52">
             {benefits.headers.contabilidade}
           </th>
-          <th className="text-center px-12 font-normal text-[22px]">
+          <th className="text-center font-normal text-[22px]">
             {benefits.headers.market}
           </th>
         </tr>
@@ -101,7 +101,7 @@ export function BenefitsTableComponent({ benefits }: { benefits: BenefitsTable }
       <tbody>
         {benefits.lines.map((item, index) => (
           <tr key={index}>
-            <td colSpan={3} key={index} className={`border-b border-neutral-100 px-4 font-medium text-[18px] ${index === benefits.lines.length - 1 ? "border-none" : ""}`}>
+            <td colSpan={3} key={index} className={`border-b border-neutral-100 font-medium text-[18px] ${index === benefits.lines.length - 1 ? "border-none" : ""}`}>
               {item.text}
             </td>
             <td className={`border-b-1 border-neutral-100 dark:text-green-800 text-primary font text-center text-[18px] bg-gray-50 h-20 ${index === benefits.lines.length - 1 ? "rounded-b-[12px] border-none" : ""}`}>
@@ -132,7 +132,7 @@ export default function Home() {
     : "no Brasil";
   return (
     <div>
-      <section className="flex flex-col items-center justify-center gap-12 py-7 md:py-44 w-full px-4">
+      <section className="flex flex-col items-center justify-center gap-12 py-7 md:py-44 w-full">
         <h2 className="text-3xl text-center md:max-w-[630px] md:text-[42px] font-[Poppins] font-medium leading-[120%] tracking-[-1%]">
           Por que a <span className="text-primary">Contabilidade.com </span>
           é a melhor opção {cidade}?
