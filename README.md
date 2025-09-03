@@ -35,3 +35,11 @@ The project will be running at http://localhost:3000.
 
 This is not a production-ready project.  
 It was built as a demonstration repository to show to Contabilidade.com my skills building responsive UIs with Next.js and TailwindCSS, while also sharing ideas, examples, and good practices.
+
+## 🔧 Working functions
+
+Theme switcher: Easily toggle between light, dark and system modes using the icon at the top left corner of the page.
+
+City selector: Add `?cidade=CITY_NAME` to the end of the URL to view the project customized for different cities.
+
+Responsiveness: The layout automatically switches to card view on smaller devices for a better mobile experience.
