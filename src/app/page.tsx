@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { Button } from "~/components/ui/button";
 
+/*COMPONENTIZAÇÃO DA TABELA*/
 
 export type BenefitsTable = {
   headers: {
@@ -16,6 +17,8 @@ export type BenefitsTable = {
     marketFrequency: 'monthly' | 'yearly'
   }>
 }
+
+
 
 export const benefits: BenefitsTable = {
   headers: {
@@ -51,7 +54,8 @@ export const benefits: BenefitsTable = {
     }
   ]
 }
-
+/*PARA A MELHOR RESPONSIVIDADE A TABELA É CONVERTIDA EM CARDS EM DISPOSITIVOS MÓVEIS*/
+/*FUNÇÃO DISPOSITIVOS MÓVEIS*/
 export function BenefitsCardComponent({ benefits }: { benefits: BenefitsTable }) {
   return (
     <div className="md:hidden flex flex-col gap-5 justify-center mx-auto items-center">
@@ -81,19 +85,22 @@ export function BenefitsCardComponent({ benefits }: { benefits: BenefitsTable })
   )
 }
 
+/*FUNÇÃO PARA A TABELA NOS DISPOSITIVOS RESTANTES*/
+/*PARA ALCANÇAR O PADRÃO MAIS PRÓXIMO POSSÍVEL DO DESEJADO VEREMOS NO CÓDIGO NÚMEROS FRACIONADOS*/
+/*POR BOAS PRÁTICAS SERIA IDEAL QUE OS VALORES FOSSEM ARREDONDADOS*/
 
 export function BenefitsTableComponent({ benefits }: { benefits: BenefitsTable }) {
   return (
-    <table className="w-full max-w-[986px] hidden md:block">
+    <table className="w-full max-w-[986px] max-h-[495px] hidden md:block">
       <thead>
         <tr className="border-b border-primary align-middle">
-          <th colSpan={3} className="text-left text-primary text-[22px]">
+          <th colSpan={3} className="p-[10px] w-[557px] text-left text-primary text-[22px]">
             {benefits.headers.firstColumn}
           </th>
-          <th className="bg-neutral-50 rounded-t-2xl py-[32.16px] align-middle w-52">
+          <th className="p-[10px] bg-neutral-50 rounded-t-2xl py-[32.16px] align-middle w-[208px]">
             {benefits.headers.contabilidade}
           </th>
-          <th className="text-center font-normal text-[22px]">
+          <th className="pl-[29px] pt-[22px] font-normal text-[22px]">
             {benefits.headers.market}
           </th>
         </tr>
@@ -101,13 +108,13 @@ export function BenefitsTableComponent({ benefits }: { benefits: BenefitsTable }
       <tbody>
         {benefits.lines.map((item, index) => (
           <tr key={index}>
-            <td colSpan={3} key={index} className={`border-b border-neutral-100 font-medium text-[18px] ${index === benefits.lines.length - 1 ? "border-none" : ""}`}>
+            <td colSpan={3} key={index} className={`p-[10px] h-[78px] w-[557px] border-b border-neutral-100 font-medium text-[18px] ${index === benefits.lines.length - 1 ? "border-none" : ""}`}>
               {item.text}
             </td>
-            <td className={`border-b-1 border-neutral-100 dark:text-green-800 text-primary font text-center text-[18px] bg-gray-50 h-20 ${index === benefits.lines.length - 1 ? "rounded-b-[12px] border-none" : ""}`}>
+            <td className={`p-[10px] h-[78px] border-b-1 border-neutral-100 dark:text-green-800 text-primary font-bold text-center text-[18px] bg-gray-50 ${index === benefits.lines.length - 1 ? "rounded-b-[12px] border-none" : ""}`}>
               Incluso
             </td>
-            <td className={`border-b-1 border-neutral-100 text-left text-[18px] ${index === benefits.lines.length - 1 ? "border-none" : ""}`}>
+            <td className={`h-[78px] border-b-1 border-neutral-100 text-left text-[18px] ${index === benefits.lines.length - 1 ? "border-none" : ""}`}>
               <div className="w-[150px] mx-auto">
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
