@@ -139,7 +139,7 @@ export default function Home() {
     : "no Brasil";
   return (
     <div>
-      <section className="flex flex-col items-center justify-center gap-12 py-7 md:py-44 w-full">
+      <section className="flex flex-col items-center justify-center gap-[50px] py-7 md:py-44 w-full">
         <h2 className="text-3xl text-center md:max-w-[630px] md:text-[42px] font-[Poppins] font-medium leading-[120%] tracking-[-1%]">
           Por que a <span className="text-primary">Contabilidade.com </span>
           é a melhor opção {cidade}?
@@ -147,7 +147,8 @@ export default function Home() {
         <BenefitsTableComponent benefits={benefits} />
         <BenefitsCardComponent benefits={benefits} />
         <div className="text-primary flex flex-row items-center gap-6">
-          <Image src="/icon-coin.png" alt="Icone de uma moeda de dolar" width="62" height="62" /> <p>
+          <Image src="/icon-coin.png" alt="Icone de uma moeda de dolar" width="62" height="62" /> 
+          <p className="text-[26px]">
             Uma economia média de <b>R$ 9.456/ano</b>
           </p>
         </div>
