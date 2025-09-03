@@ -101,13 +101,13 @@ export function BenefitsTableComponent({ benefits }: { benefits: BenefitsTable }
       <tbody>
         {benefits.lines.map((item, index) => (
           <tr key={index}>
-            <td colSpan={3} key={index} className="px-4 font-medium text-[18px]">
+            <td colSpan={3} key={index} className="border-b border-neutral-100 px-4 font-medium text-[18px]">
               {item.text}
             </td>
-            <td className={`dark:text-green-800 text-primary font text-center text-[18px] bg-gray-50 h-20 ${index === benefits.lines.length - 1 ? "rounded-b-[12px]" : ""}`}>
+            <td className={`border-b border-neutral-100 dark:text-green-800 text-primary font text-center text-[18px] bg-gray-50 h-20 ${index === benefits.lines.length - 1 ? "rounded-b-[12px]" : ""}`}>
               Incluso
             </td>
-            <td className="text-left text-[18px]">
+            <td className="border-b-4 border-neutral-100 text-left text-[18px]">
               <div className="w-[150px] mx-auto">
                 {new Intl.NumberFormat('pt-BR', {
                   style: 'currency',
