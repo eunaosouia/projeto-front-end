@@ -20,7 +20,7 @@ export type BenefitsTable = {
 
 
 
-export const benefits: BenefitsTable = {
+const benefits: BenefitsTable = {
   headers: {
     firstColumn: "Benefícios inclusos no seu pacote",
     contabilidade: <><Image src="/table-logo.png" alt="Contabilidade Logo" width={32.17} height={40} className="mx-auto" /></>,
