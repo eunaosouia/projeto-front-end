@@ -5,7 +5,7 @@ import { Button } from "~/components/ui/button";
 
 /*COMPONENTIZAÇÃO DA TABELA*/
 
-export type BenefitsTable = {
+type BenefitsTable = {
   headers: {
     firstColumn: string
     contabilidade: React.ReactNode
@@ -56,7 +56,7 @@ const benefits: BenefitsTable = {
 }
 /*PARA A MELHOR RESPONSIVIDADE A TABELA É CONVERTIDA EM CARDS EM DISPOSITIVOS MÓVEIS*/
 /*FUNÇÃO DISPOSITIVOS MÓVEIS*/
-export function BenefitsCardComponent({ benefits }: { benefits: BenefitsTable }) {
+function BenefitsCardComponent({ benefits }: { benefits: BenefitsTable }) {
   return (
     <div className="md:hidden flex flex-col gap-5 justify-center mx-auto items-center">
       {benefits.lines.map((item, index) => (
@@ -89,7 +89,7 @@ export function BenefitsCardComponent({ benefits }: { benefits: BenefitsTable })
 /*PARA ALCANÇAR O PADRÃO MAIS PRÓXIMO POSSÍVEL DO DESEJADO VEREMOS NO CÓDIGO NÚMEROS FRACIONADOS*/
 /*POR BOAS PRÁTICAS SERIA IDEAL QUE OS VALORES FOSSEM ARREDONDADOS*/
 
-export function BenefitsTableComponent({ benefits }: { benefits: BenefitsTable }) {
+function BenefitsTableComponent({ benefits }: { benefits: BenefitsTable }) {
   return (
     <table className="w-full max-w-[986px] max-h-[495px] hidden md:block">
       <thead>
