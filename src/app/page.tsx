@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { Button } from "~/components/ui/button";
 
-/*COMPONENTIZAÇÃO DA TABELA*/
+
 
 type BenefitsTable = {
   headers: {
@@ -129,7 +129,10 @@ function BenefitsTableComponent({ benefits }: { benefits: BenefitsTable }) {
   )
 }
 
-export default function Home() {
+
+import { Suspense } from "react";
+
+function HomeContent() {
   const searchParams = useSearchParams();
   const rawCidade = searchParams.get("cidade");
 
@@ -157,5 +160,13 @@ export default function Home() {
         </Button>
       </section>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }
